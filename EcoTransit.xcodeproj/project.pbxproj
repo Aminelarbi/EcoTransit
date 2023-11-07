@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */; };
+		7C475D3F2AF7B49400F84EF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D3E2AF7B49400F84EF2 /* ContentView.swift */; };
+		7C475D412AF7B49500F84EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C475D402AF7B49500F84EF2 /* Assets.xcassets */; };
+		7C475D442AF7B49500F84EF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C475D432AF7B49500F84EF2 /* Preview Assets.xcassets */; };
+		7C475D462AF7B49500F84EF2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D452AF7B49500F84EF2 /* Persistence.swift */; };
+		7C475D492AF7B49500F84EF2 /* EcoTransit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D472AF7B49500F84EF2 /* EcoTransit.xcdatamodeld */; };
+		7C475D532AF7B49500F84EF2 /* EcoTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D522AF7B49500F84EF2 /* EcoTransitTests.swift */; };
+		7C475D5D2AF7B49500F84EF2 /* EcoTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D5C2AF7B49500F84EF2 /* EcoTransitUITests.swift */; };
+		7C475D5F2AF7B49500F84EF2 /* EcoTransitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D5E2AF7B49500F84EF2 /* EcoTransitUITestsLaunchTests.swift */; };
+		7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A2292AF7CFBA00E21836 /* CustomViews.swift */; };
+		7CD4A22C2AF7D92900E21836 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */; };
+		7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A22D2AF7EBF100E21836 /* BilletView.swift */; };
+		7CD4A2302AF7FF1800E21836 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A22F2AF7FF1800E21836 /* NavigationBarView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C475D4F2AF7B49500F84EF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C475D312AF7B49400F84EF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C475D382AF7B49400F84EF2;
+			remoteInfo = EcoTransit;
+		};
+		7C475D592AF7B49500F84EF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C475D312AF7B49400F84EF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C475D382AF7B49400F84EF2;
+			remoteInfo = EcoTransit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7C475D392AF7B49400F84EF2 /* EcoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitApp.swift; sourceTree = "<group>"; };
+		7C475D3E2AF7B49400F84EF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7C475D402AF7B49500F84EF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C475D432AF7B49500F84EF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7C475D452AF7B49500F84EF2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7C475D482AF7B49500F84EF2 /* EcoTransit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcoTransit.xcdatamodel; sourceTree = "<group>"; };
+		7C475D4E2AF7B49500F84EF2 /* EcoTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C475D522AF7B49500F84EF2 /* EcoTransitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitTests.swift; sourceTree = "<group>"; };
+		7C475D582AF7B49500F84EF2 /* EcoTransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoTransitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C475D5C2AF7B49500F84EF2 /* EcoTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitUITests.swift; sourceTree = "<group>"; };
+		7C475D5E2AF7B49500F84EF2 /* EcoTransitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7CD4A2292AF7CFBA00E21836 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		7CD4A22D2AF7EBF100E21836 /* BilletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletView.swift; sourceTree = "<group>"; };
+		7CD4A22F2AF7FF1800E21836 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C475D362AF7B49400F84EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C475D4B2AF7B49500F84EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C475D552AF7B49500F84EF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C475D302AF7B49400F84EF2 = {
+			isa = PBXGroup;
+			children = (
+				7C475D3B2AF7B49400F84EF2 /* EcoTransit */,
+				7C475D512AF7B49500F84EF2 /* EcoTransitTests */,
+				7C475D5B2AF7B49500F84EF2 /* EcoTransitUITests */,
+				7C475D3A2AF7B49400F84EF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C475D3A2AF7B49400F84EF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C475D392AF7B49400F84EF2 /* EcoTransit.app */,
+				7C475D4E2AF7B49500F84EF2 /* EcoTransitTests.xctest */,
+				7C475D582AF7B49500F84EF2 /* EcoTransitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C475D3B2AF7B49400F84EF2 /* EcoTransit */ = {
+			isa = PBXGroup;
+			children = (
+				7CD4A2282AF7CF9800E21836 /* SupportingViews */,
+				7C475D6B2AF7BC5100F84EF2 /* Views */,
+				7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */,
+				7C475D3E2AF7B49400F84EF2 /* ContentView.swift */,
+				7C475D402AF7B49500F84EF2 /* Assets.xcassets */,
+				7C475D452AF7B49500F84EF2 /* Persistence.swift */,
+				7C475D472AF7B49500F84EF2 /* EcoTransit.xcdatamodeld */,
+				7C475D422AF7B49500F84EF2 /* Preview Content */,
+			);
+			path = EcoTransit;
+			sourceTree = "<group>";
+		};
+		7C475D422AF7B49500F84EF2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7C475D432AF7B49500F84EF2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7C475D512AF7B49500F84EF2 /* EcoTransitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C475D522AF7B49500F84EF2 /* EcoTransitTests.swift */,
+			);
+			path = EcoTransitTests;
+			sourceTree = "<group>";
+		};
+		7C475D5B2AF7B49500F84EF2 /* EcoTransitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7C475D5C2AF7B49500F84EF2 /* EcoTransitUITests.swift */,
+				7C475D5E2AF7B49500F84EF2 /* EcoTransitUITestsLaunchTests.swift */,
+			);
+			path = EcoTransitUITests;
+			sourceTree = "<group>";
+		};
+		7C475D6B2AF7BC5100F84EF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */,
+				7CD4A22D2AF7EBF100E21836 /* BilletView.swift */,
+				7CD4A22F2AF7FF1800E21836 /* NavigationBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CD4A2282AF7CF9800E21836 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				7CD4A2292AF7CFBA00E21836 /* CustomViews.swift */,
+			);
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C475D382AF7B49400F84EF2 /* EcoTransit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C475D622AF7B49500F84EF2 /* Build configuration list for PBXNativeTarget "EcoTransit" */;
+			buildPhases = (
+				7C475D352AF7B49400F84EF2 /* Sources */,
+				7C475D362AF7B49400F84EF2 /* Frameworks */,
+				7C475D372AF7B49400F84EF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EcoTransit;
+			productName = EcoTransit;
+			productReference = 7C475D392AF7B49400F84EF2 /* EcoTransit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7C475D4D2AF7B49500F84EF2 /* EcoTransitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C475D652AF7B49500F84EF2 /* Build configuration list for PBXNativeTarget "EcoTransitTests" */;
+			buildPhases = (
+				7C475D4A2AF7B49500F84EF2 /* Sources */,
+				7C475D4B2AF7B49500F84EF2 /* Frameworks */,
+				7C475D4C2AF7B49500F84EF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C475D502AF7B49500F84EF2 /* PBXTargetDependency */,
+			);
+			name = EcoTransitTests;
+			productName = EcoTransitTests;
+			productReference = 7C475D4E2AF7B49500F84EF2 /* EcoTransitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7C475D572AF7B49500F84EF2 /* EcoTransitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C475D682AF7B49500F84EF2 /* Build configuration list for PBXNativeTarget "EcoTransitUITests" */;
+			buildPhases = (
+				7C475D542AF7B49500F84EF2 /* Sources */,
+				7C475D552AF7B49500F84EF2 /* Frameworks */,
+				7C475D562AF7B49500F84EF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C475D5A2AF7B49500F84EF2 /* PBXTargetDependency */,
+			);
+			name = EcoTransitUITests;
+			productName = EcoTransitUITests;
+			productReference = 7C475D582AF7B49500F84EF2 /* EcoTransitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C475D312AF7B49400F84EF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					7C475D382AF7B49400F84EF2 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					7C475D4D2AF7B49500F84EF2 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 7C475D382AF7B49400F84EF2;
+					};
+					7C475D572AF7B49500F84EF2 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 7C475D382AF7B49400F84EF2;
+					};
+				};
+			};
+			buildConfigurationList = 7C475D342AF7B49400F84EF2 /* Build configuration list for PBXProject "EcoTransit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7C475D302AF7B49400F84EF2;
+			productRefGroup = 7C475D3A2AF7B49400F84EF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C475D382AF7B49400F84EF2 /* EcoTransit */,
+				7C475D4D2AF7B49500F84EF2 /* EcoTransitTests */,
+				7C475D572AF7B49500F84EF2 /* EcoTransitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C475D372AF7B49400F84EF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C475D442AF7B49500F84EF2 /* Preview Assets.xcassets in Resources */,
+				7C475D412AF7B49500F84EF2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C475D4C2AF7B49500F84EF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C475D562AF7B49500F84EF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C475D352AF7B49400F84EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C475D462AF7B49500F84EF2 /* Persistence.swift in Sources */,
+				7C475D3F2AF7B49400F84EF2 /* ContentView.swift in Sources */,
+				7CD4A2302AF7FF1800E21836 /* NavigationBarView.swift in Sources */,
+				7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */,
+				7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */,
+				7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */,
+				7C475D492AF7B49500F84EF2 /* EcoTransit.xcdatamodeld in Sources */,
+				7CD4A22C2AF7D92900E21836 /* SubscriptionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C475D4A2AF7B49500F84EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C475D532AF7B49500F84EF2 /* EcoTransitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C475D542AF7B49500F84EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C475D5F2AF7B49500F84EF2 /* EcoTransitUITestsLaunchTests.swift in Sources */,
+				7C475D5D2AF7B49500F84EF2 /* EcoTransitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C475D502AF7B49500F84EF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C475D382AF7B49400F84EF2 /* EcoTransit */;
+			targetProxy = 7C475D4F2AF7B49500F84EF2 /* PBXContainerItemProxy */;
+		};
+		7C475D5A2AF7B49500F84EF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C475D382AF7B49400F84EF2 /* EcoTransit */;
+			targetProxy = 7C475D592AF7B49500F84EF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7C475D602AF7B49500F84EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7C475D612AF7B49500F84EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C475D632AF7B49500F84EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EcoTransit/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TransportCom.EcoTransit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C475D642AF7B49500F84EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EcoTransit/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TransportCom.EcoTransit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7C475D662AF7B49500F84EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TransportCom.EcoTransitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoTransit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EcoTransit";
+			};
+			name = Debug;
+		};
+		7C475D672AF7B49500F84EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TransportCom.EcoTransitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoTransit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EcoTransit";
+			};
+			name = Release;
+		};
+		7C475D692AF7B49500F84EF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TransportCom.EcoTransitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcoTransit;
+			};
+			name = Debug;
+		};
+		7C475D6A2AF7B49500F84EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TransportCom.EcoTransitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcoTransit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C475D342AF7B49400F84EF2 /* Build configuration list for PBXProject "EcoTransit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C475D602AF7B49500F84EF2 /* Debug */,
+				7C475D612AF7B49500F84EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C475D622AF7B49500F84EF2 /* Build configuration list for PBXNativeTarget "EcoTransit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C475D632AF7B49500F84EF2 /* Debug */,
+				7C475D642AF7B49500F84EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C475D652AF7B49500F84EF2 /* Build configuration list for PBXNativeTarget "EcoTransitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C475D662AF7B49500F84EF2 /* Debug */,
+				7C475D672AF7B49500F84EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C475D682AF7B49500F84EF2 /* Build configuration list for PBXNativeTarget "EcoTransitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C475D692AF7B49500F84EF2 /* Debug */,
+				7C475D6A2AF7B49500F84EF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7C475D472AF7B49500F84EF2 /* EcoTransit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C475D482AF7B49500F84EF2 /* EcoTransit.xcdatamodel */,
+			);
+			currentVersion = 7C475D482AF7B49500F84EF2 /* EcoTransit.xcdatamodel */;
+			path = EcoTransit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7C475D312AF7B49400F84EF2 /* Project object */;
+}
