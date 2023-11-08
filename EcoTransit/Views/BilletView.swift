@@ -26,48 +26,59 @@ struct BilletView: View {
     ]
 
     @State private var selectedBillet: Billet?
+    @State private var isPayingNow = false
 
     var body: some View {
         NavigationView {
-            List(billets) { billet in
-                HStack {
-                    Image(billet.serviceType + "Icon")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
-                        .padding(.trailing, 10)
+            List {
+                ForEach(billets) { billet in
+                    HStack {
+                        Image(billet.serviceType + "Icon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                            .padding(.trailing, 10)
 
-                    VStack(alignment: .leading) {
-                        Text("Distance: \(String(format: "%.1f", billet.distance))km")
-                        Text("Estimated Price: \(String(format: "%.2f", billet.estimatedPrice))dt")
-                        Text("Estimated Time: \(billet.estimatedTime)")
+                        VStack(alignment: .leading) {
+                            Text("Distance: \(String(format: "%.1f", billet.distance))km")
+                            Text("Estimated Price: \(String(format: "%.2f", billet.estimatedPrice))dt")
+                            Text("Estimated Time: \(billet.estimatedTime)")
+                        }
                     }
-                }
-                .padding()
-                .background(Color("background"))
-                .cornerRadius(10)
-                .foregroundColor(.black)
-                .onTapGesture {
-                    selectedBillet = billet
+                    .padding()
+                    .background(Color("background"))
+                    .cornerRadius(10)
+                    .foregroundColor(.black)
+                    .onTapGesture {
+                        selectedBillet = billet
+                    }
                 }
             }
             .navigationTitle("Billets")
             .sheet(item: $selectedBillet) { selectedBillet in
-                DetailedBilletView(billet: selectedBillet)
+                DetailedBilletView(billet: selectedBillet, isPayingNow: $isPayingNow)
             }
+            .background(
+                NavigationLink("", destination: SubscriptionView(), isActive: $isPayingNow)
+                    .opacity(0)
+            )
         }
     }
 }
+
+
+
 struct DetailedBilletView: View {
     let billet: Billet
+    @Binding var isPayingNow: Bool
 
     var body: some View {
         VStack {
-            Spacer() // Push content to the center of the screen
+            Spacer()
             Text("Details for Selected Ticket")
                 .font(.largeTitle)
                 .padding()
-                .frame(maxWidth: .infinity, alignment: .center) // Center text horizontally
+                .frame(maxWidth: .infinity, alignment: .center)
 
             Image(billet.serviceType + "Icon")
                 .resizable()
@@ -86,11 +97,25 @@ struct DetailedBilletView: View {
             }
             .padding()
 
-            Spacer() // Push content to the center of the screen
+            Spacer()
+
+            Button(action: {
+                isPayingNow = true
+            }) {
+                Text("Pay Now")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 44)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+            }
         }
         .navigationBarTitle("Ticket Details")
     }
 }
+
+
+
 
 
 

@@ -16,6 +16,11 @@ struct NavigationBarView: View {
 
     var body: some View {
         TabView(selection: $currentTab) {
+            SubscriptionView()
+                     .tag(Tab.Subs)
+
+                 BilletView()
+                     .tag(Tab.Billet)
             Text("Home View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(""))
@@ -33,15 +38,7 @@ struct NavigationBarView: View {
                 .background(Color(""))
                 .tag(Tab.Profile)
 
-            NavigationLink(destination: SubscriptionView()) {
-                Text("Subscription View")
-            }
-            .tag(Tab.Subs)
-
-            NavigationLink(destination: BilletView()) {
-                Text("Billet View")
-            }
-            .tag(Tab.Billet)
+      
         }
         .overlay(
             HStack(spacing: 0) {
@@ -137,5 +134,10 @@ struct MaterialEffect: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
         //
+    }
+}
+struct NavigationBar_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationBarView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

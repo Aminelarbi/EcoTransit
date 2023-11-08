@@ -29,7 +29,7 @@ struct CreditCardView: View {
     }
 
     var body: some View {
-        Text("This is the CreditCardView for \(subscription.name)")
+        Text("Welcome to \(subscription.name) Payment Method")
         NavigationView {
             Form {
                 Section {
@@ -66,7 +66,7 @@ struct SelectCardsView: View {
                 HStack {
                     Image("paypal")
                         .resizable()
-                        .frame(width: 24, height: 24)
+                        .frame(width: 50, height: 50)
                         .padding(.leading, 16)
 
                     Text("Email: example@example.com")
@@ -87,7 +87,7 @@ struct SelectCardsView: View {
                 HStack(spacing: 20) {
                     Image("mastercard")
                         .resizable()
-                        .frame(width: 24, height: 24)
+                        .frame(width: 50, height: 50)
 
                     VStack(alignment: .leading, spacing: 15) {
                         Text("*****35322565")
@@ -129,7 +129,7 @@ struct SelectCardsView: View {
                 HStack(spacing: 20) {
                     Image("cash")
                         .resizable()
-                        .frame(width: 24, height: 24)
+                        .frame(width: 50, height: 50)
                         .padding(16)
 
                     VStack(alignment: .leading, spacing: 15) {
@@ -201,7 +201,7 @@ struct AddCardView: View {
     var body: some View {
         Image("mastercard1")
             .resizable()
-            .frame(width: 24, height: 24)
+            .frame(width: 200, height: 200)
 
         VStack(alignment: .leading, spacing: 15) {
             Form {

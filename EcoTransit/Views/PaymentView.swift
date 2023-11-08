@@ -33,11 +33,14 @@ struct PaymentView: View {
                     // Show the CreditCardView when the "Pay" button is pressed
                     isCreditCardViewPresented = true
                 }
+               
                 .font(.title)
-                .padding()
+                .padding(.vertical , -100	)
                 .sheet(isPresented: $isCreditCardViewPresented) {
                     CreditCardView(subscription: $subscription, discountCode: $discountCode) // Pass the discountCode
+                  
                 }
+                
             }
             .navigationBarTitle("Payment")
         }
