@@ -13,7 +13,7 @@ struct EcoTransitApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SubscriptionView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

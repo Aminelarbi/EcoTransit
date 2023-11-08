@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */; };
+		7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */; };
+		7C2EC12A2AFAE90A0047DBE9 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */; };
+		7C2EC12C2AFB05700047DBE9 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */; };
 		7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */; };
 		7C475D3F2AF7B49400F84EF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D3E2AF7B49400F84EF2 /* ContentView.swift */; };
 		7C475D412AF7B49500F84EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C475D402AF7B49500F84EF2 /* Assets.xcassets */; };
@@ -19,7 +23,6 @@
 		7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A2292AF7CFBA00E21836 /* CustomViews.swift */; };
 		7CD4A22C2AF7D92900E21836 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */; };
 		7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A22D2AF7EBF100E21836 /* BilletView.swift */; };
-		7CD4A2302AF7FF1800E21836 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4A22F2AF7FF1800E21836 /* NavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationView.swift; sourceTree = "<group>"; };
+		7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		7C475D392AF7B49400F84EF2 /* EcoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoTransitApp.swift; sourceTree = "<group>"; };
 		7C475D3E2AF7B49400F84EF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +62,6 @@
 		7CD4A2292AF7CFBA00E21836 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		7CD4A22D2AF7EBF100E21836 /* BilletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletView.swift; sourceTree = "<group>"; };
-		7CD4A22F2AF7FF1800E21836 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +154,10 @@
 			children = (
 				7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */,
 				7CD4A22D2AF7EBF100E21836 /* BilletView.swift */,
-				7CD4A22F2AF7FF1800E21836 /* NavigationBarView.swift */,
+				7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */,
+				7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */,
+				7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */,
+				7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,9 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C475D462AF7B49500F84EF2 /* Persistence.swift in Sources */,
+				7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */,
+				7C2EC12C2AFB05700047DBE9 /* NavigationBarView.swift in Sources */,
 				7C475D3F2AF7B49400F84EF2 /* ContentView.swift in Sources */,
-				7CD4A2302AF7FF1800E21836 /* NavigationBarView.swift in Sources */,
+				7C2EC12A2AFAE90A0047DBE9 /* CreditCardView.swift in Sources */,
 				7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */,
+				7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */,
 				7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */,
 				7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */,
 				7C475D492AF7B49500F84EF2 /* EcoTransit.xcdatamodeld in Sources */,

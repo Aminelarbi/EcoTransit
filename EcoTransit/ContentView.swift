@@ -7,60 +7,65 @@
 
 import SwiftUI
 import CoreData
-
+/* 
 struct ContentView: View {
-    @State var currentTab: Tab = .Notification
-    //Hide Native Bar
-    init (){
+   @State var currentTab: Tab = .Notification
+
+    // Hide Native Bar
+    init() {
         UITabBar.appearance().isHidden = true
     }
-    
-    var body: some View{
-        TabView(selection: $currentTab){
-            Text ("Home View")
+
+    var body: some View {
+        TabView(selection: $currentTab) {
+            Text("Home View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(""))
                 .tag(Tab.Home)
-            Text ("Search View")
+            Text("Search View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(""))
                 .tag(Tab.Search)
-            Text ("Notification View")
+            Text("Notification View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(""))
                 .tag(Tab.Notification)
-            Text ("Profile View")
+            Text("Profile View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(""))
                 .tag(Tab.Profile)
-            Text ("Cart View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(""))
-                .tag(Tab.Cart)
-            
+
+            NavigationLink(destination: SubscriptionView()) {
+                Text("Subscription View")
+            }
+            .tag(Tab.Subs)
+
+            NavigationLink(destination: BilletView()) {
+                Text("Billet View")
+            }
+            .tag(Tab.Billet)
         }
         .overlay(
-            HStack(spacing: 0){
-                ForEach(Tab.allCases, id: \.rawValue){tab in
+            HStack(spacing: 0) {
+                ForEach(Tab.allCases, id: \.rawValue) { tab in
                     TabButton(tab: tab)
                 }
                 .padding(.vertical)
                 .padding(.bottom, getSafeArea().bottom == 0 ? 5 : (getSafeArea().bottom - 15))
-                
-            }
-            ,
+            },
             alignment: .bottom
-        ).ignoresSafeArea(.all, edges: .bottom)
-   
+        )
+        .ignoresSafeArea(.all, edges: .bottom)
     }
-    func TabButton(tab: Tab)-> some View{
-        GeometryReader{proxy in
+
+    func TabButton(tab: Tab) -> some View {
+        GeometryReader { proxy in
             Button(action: {
-                withAnimation(.spring()){
+                withAnimation(.spring()) {
                     currentTab = tab
                 }
             }, label: {
-                VStack(spacing: 0){
+                VStack(spacing: 0) {
                     Image(systemName: currentTab == tab ? tab.rawValue + ".fill" : tab.rawValue)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -69,24 +74,22 @@ struct ContentView: View {
                         .foregroundColor(currentTab == tab ? .primary : .secondary)
                         .padding(currentTab == tab ? 15 : 0)
                         .background(
-                            ZStack{
+                            ZStack {
                                 if currentTab == tab {
                                     MaterialEffect(style: .light)
-                                        .clipShape( Circle())
+                                        .clipShape(Circle())
                                     Text(tab.tabName).foregroundColor(.primary)
                                         .font(.footnote).padding(.top, 50)
                                 }
                             })
                         .contentShape(Rectangle())
-                        .offset(y: currentTab == tab ? -35 :0)
+                        .offset(y: currentTab == tab ? -35 : 0)
                 }
             })
         }
         .frame(height: 25)
     }
-   
-    }
-
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -94,15 +97,16 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-enum Tab: String, CaseIterable{
+enum Tab: String, CaseIterable {
     case Home = "house"
     case Search = "magnifyingglass.circle"
     case Notification = "bell"
     case Profile = "person"
-    case Cart = "cart"
-    
+    case Subs = "creditcard"
+    case Billet = "ticket"
+
     var tabName: String {
-        switch self{
+        switch self {
         case .Home:
             return "Home"
         case .Search:
@@ -111,15 +115,17 @@ enum Tab: String, CaseIterable{
             return "Notifications"
         case .Profile:
             return "Profile"
-        case .Cart:
-            return "Cart"
+        case .Subs:
+            return "Subs"
+        case .Billet:
+            return "Billet"
         }
     }
 }
 
-//safe area
+// Safe area
 extension View {
-    func getSafeArea()-> UIEdgeInsets {
+    func getSafeArea() -> UIEdgeInsets {
         guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
             return .zero
         }
@@ -130,14 +136,16 @@ extension View {
     }
 }
 
-struct MaterialEffect: UIViewRepresentable{
+struct MaterialEffect: UIViewRepresentable {
     var style: UIBlurEffect.Style
-    
+
     func makeUIView(context: Context) -> UIVisualEffectView {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: style))
         return view
     }
+
     func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
         //
     }
 }
+*/
