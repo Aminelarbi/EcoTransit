@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67E078592B04D824003F8585 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E078582B04D824003F8585 /* Home.swift */; };
 		7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */; };
 		7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */; };
 		7C2EC12A2AFAE90A0047DBE9 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67E078582B04D824003F8585 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationView.swift; sourceTree = "<group>"; };
 		7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */,
 				7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */,
 				7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */,
+				67E078582B04D824003F8585 /* Home.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */,
 				7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */,
 				7C475D492AF7B49500F84EF2 /* EcoTransit.xcdatamodeld in Sources */,
+				67E078592B04D824003F8585 /* Home.swift in Sources */,
 				7CD4A22C2AF7D92900E21836 /* SubscriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

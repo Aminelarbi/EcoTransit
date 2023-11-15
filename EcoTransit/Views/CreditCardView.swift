@@ -37,7 +37,7 @@ struct CreditCardView: View {
                         Text("Choose Payment Method")
                             .frame(maxWidth: .infinity)
                             .frame(height: 44)
-                            .background(Color.blue)
+                            .background(Color.green)
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }
@@ -108,8 +108,8 @@ struct SelectCardsView: View {
                         Text("Add Card +")
                             .frame(maxWidth: .infinity)
                             .frame(height: 44)
-                            .background(Color.blue.opacity(0.25))
-                            .foregroundColor(Color.blue)
+                            .background(Color.green.opacity(0.25))
+                            .foregroundColor(Color.green)
                             .cornerRadius(20)
                     }
                 }
@@ -154,26 +154,26 @@ struct SelectCardsView: View {
                 VStack {
                               HStack {
                                   Text("Subscribe ")
-                                      .foregroundColor(.gray)
+                                      .foregroundColor(.green)
                                   Spacer()
                                   Text("+ TND \(String(format: "%.2f", total))")
-                                      .foregroundColor(.gray)
+                                      .foregroundColor(.green)
                               }
                               Divider()
                               HStack {
                                   Text("Discount ")
-                                      .foregroundColor(.gray)
+                                      .foregroundColor(.green)
                                   Spacer()
                                   Text("- TND \(String(format: "%.2f", discountCode))")
-                                      .foregroundColor(.blue)
+                                      .foregroundColor(.green)
                               }
                               Divider()
                               HStack {
                                   Text("Total")
-                                      .foregroundColor(.gray)
+                                      .foregroundColor(.green)
                                   Spacer()
                                   Text("TND \(String(format: "%.2f", total - discountCode))")
-                                      .foregroundColor(.gray)
+                                      .foregroundColor(.green)
                               }
                           }.padding()
             }
@@ -183,7 +183,7 @@ struct SelectCardsView: View {
                     Text("Subscribe now")
                         .frame(maxWidth: .infinity)
                         .frame(height: 44)
-                        .background(Color.blue)
+                        .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(20)
                 }
@@ -199,11 +199,11 @@ struct AddCardView: View {
     @State private var cvv = ""
 
     var body: some View {
-        Image("mastercard1")
-            .resizable()
-            .frame(width: 200, height: 200)
+        VStack {
+            // Display Home view
+            Home(size: CGSize(width: 375, height: 667), safeArea: EdgeInsets())
 
-        VStack(alignment: .leading, spacing: 15) {
+            // Add Card form
             Form {
                 Section {
                     TextField("Full Name", text: $fullName)
@@ -216,13 +216,15 @@ struct AddCardView: View {
                 Text("Add New Card")
                     .frame(maxWidth: .infinity)
                     .frame(height: 44)
-                    .background(Color.blue)
+                    .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(20)
             }
         }
     }
 }
+
+
 
 struct SecondPaymentView: View {
     @State private var fullName = ""
@@ -244,7 +246,7 @@ struct SecondPaymentView: View {
 
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(Color.blue.opacity(0.1))
+                    .foregroundColor(Color.green.opacity(0.1))
                     .cornerRadius(20)
                     .shadow(radius: 5)
                     .frame(height: 400)
@@ -261,9 +263,9 @@ struct SecondPaymentView: View {
                             // Handle checkbox toggle logic here
                         }) {
                             Circle()
-                                .stroke(Color.blue, lineWidth: 2)
+                                .stroke(Color.green, lineWidth: 2)
                                 .frame(width: 24, height: 24)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.green)
                                 .padding(.trailing, 16)
                         }
                     }.padding(5)
@@ -282,9 +284,9 @@ struct SecondPaymentView: View {
                             // Handle checkbox toggle logic here
                         }) {
                             Circle()
-                                .stroke(Color.blue, lineWidth: 2)
+                                .stroke(Color.green, lineWidth: 2)
                                 .frame(width: 24, height: 24)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.green)
                                 .padding(.trailing, 16)
                         }
                     }.padding(5)
@@ -303,9 +305,9 @@ struct SecondPaymentView: View {
                             // Handle checkbox toggle logic here
                         }) {
                             Circle()
-                                .stroke(Color.blue, lineWidth: 2)
+                                .stroke(Color.green, lineWidth: 2)
                                 .frame(width: 24, height: 24)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.green)
                                 .padding(.trailing, 16)
                         }
                     }.padding(5)
@@ -326,9 +328,9 @@ struct SecondPaymentView: View {
                             // Handle checkbox toggle logic here
                         }) {
                             Circle()
-                                .stroke(Color.blue, lineWidth: 2)
+                                .stroke(Color.green, lineWidth: 2)
                                 .frame(width: 24, height: 24)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.green)
                                 .padding(.trailing, 16)
                         }
                     }.padding(5)
@@ -345,7 +347,7 @@ struct SecondPaymentView: View {
                 Text("Continue")
                     .frame(maxWidth: .infinity)
                     .frame(height: 44)
-                    .background(Color.blue)
+                    .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(50)
             }

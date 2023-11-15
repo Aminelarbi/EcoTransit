@@ -29,10 +29,20 @@ struct PaymentView: View {
 
                 Spacer()
 
-                Button("Pay \(String(format: "%.2f", subscription.price)) TND") {
-                    // Show the CreditCardView when the "Pay" button is pressed
-                    isCreditCardViewPresented = true
-                }
+                Button(action: {
+                               // Show the CreditCardView when the "Pay" button is pressed
+                               isCreditCardViewPresented = true
+                           }) {
+                               Text("Pay \(String(format: "%.2f", subscription.price)) TND")
+                                   .font(.title)
+                                   .padding()
+                                   .frame(maxWidth: .infinity)
+                                   .background(Color.green)
+                                   .foregroundColor(.white)
+                                   .cornerRadius(10)
+                           }
+                           .padding(.top, -20) // Adjust the top padding to move the button up
+                 
                
                 .font(.title)
                 .padding(.vertical , -100	)
