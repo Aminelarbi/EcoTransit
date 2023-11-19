@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6757EBC62B0A6CB0008CADDD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBC52B0A6CB0008CADDD /* Network.swift */; };
+		6757EBC92B0A6D28008CADDD /* BilletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBC82B0A6D28008CADDD /* BilletViewModel.swift */; };
+		6757EBCB2B0A6D52008CADDD /* BilletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBCA2B0A6D52008CADDD /* BilletService.swift */; };
+		6757EBCE2B0A6D7E008CADDD /* BilletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */; };
+		6757EBD12B0A6DCE008CADDD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6757EBD02B0A6DCE008CADDD /* Alamofire */; };
 		67E078592B04D824003F8585 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E078582B04D824003F8585 /* Home.swift */; };
 		7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */; };
 		7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */; };
@@ -44,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6757EBC52B0A6CB0008CADDD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		6757EBC82B0A6D28008CADDD /* BilletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletViewModel.swift; sourceTree = "<group>"; };
+		6757EBCA2B0A6D52008CADDD /* BilletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletService.swift; sourceTree = "<group>"; };
+		6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletModel.swift; sourceTree = "<group>"; };
 		67E078582B04D824003F8585 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationView.swift; sourceTree = "<group>"; };
@@ -71,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6757EBD12B0A6DCE008CADDD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +101,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6757EBC42B0A6C9D008CADDD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6757EBC52B0A6CB0008CADDD /* Network.swift */,
+				6757EBCA2B0A6D52008CADDD /* BilletService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6757EBC72B0A6D08008CADDD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6757EBC82B0A6D28008CADDD /* BilletViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6757EBCC2B0A6D6E008CADDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7C475D302AF7B49400F84EF2 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +149,9 @@
 		7C475D3B2AF7B49400F84EF2 /* EcoTransit */ = {
 			isa = PBXGroup;
 			children = (
+				6757EBCC2B0A6D6E008CADDD /* Model */,
+				6757EBC72B0A6D08008CADDD /* ViewModels */,
+				6757EBC42B0A6C9D008CADDD /* Services */,
 				7CD4A2282AF7CF9800E21836 /* SupportingViews */,
 				7C475D6B2AF7BC5100F84EF2 /* Views */,
 				7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */,
@@ -189,6 +227,9 @@
 			dependencies = (
 			);
 			name = EcoTransit;
+			packageProductDependencies = (
+				6757EBD02B0A6DCE008CADDD /* Alamofire */,
+			);
 			productName = EcoTransit;
 			productReference = 7C475D392AF7B49400F84EF2 /* EcoTransit.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 7C475D302AF7B49400F84EF2;
+			packageReferences = (
+				6757EBCF2B0A6DCE008CADDD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7C475D3A2AF7B49400F84EF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,12 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6757EBC62B0A6CB0008CADDD /* Network.swift in Sources */,
 				7C475D462AF7B49500F84EF2 /* Persistence.swift in Sources */,
+				6757EBC92B0A6D28008CADDD /* BilletViewModel.swift in Sources */,
+				6757EBCB2B0A6D52008CADDD /* BilletService.swift in Sources */,
 				7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */,
 				7C2EC12C2AFB05700047DBE9 /* NavigationBarView.swift in Sources */,
 				7C475D3F2AF7B49400F84EF2 /* ContentView.swift in Sources */,
 				7C2EC12A2AFAE90A0047DBE9 /* CreditCardView.swift in Sources */,
 				7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */,
+				6757EBCE2B0A6D7E008CADDD /* BilletModel.swift in Sources */,
 				7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */,
 				7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */,
 				7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */,
@@ -633,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6757EBCF2B0A6DCE008CADDD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6757EBD02B0A6DCE008CADDD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6757EBCF2B0A6DCE008CADDD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7C475D472AF7B49500F84EF2 /* EcoTransit.xcdatamodeld */ = {

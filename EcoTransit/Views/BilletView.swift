@@ -186,7 +186,7 @@ struct BilletView_Previews: PreviewProvider {
 
 import SwiftUI
 
-struct Billet: Identifiable {
+struct Billet: Identifiable, Decodable {
     var id = UUID()
     var distance: Double
     var estimatedPrice: Double
