@@ -10,29 +10,24 @@ import SwiftUI
 
 class BilletViewModel: ObservableObject {
     
-    @Published var billets: [Billet] = []
+    @Published var billets: [BilletModel] = []
     
     @Published var isLoading = true
     
     @Published var message: String = ""
-
     
     
-    func fetchGuides() {
-        BilletService().fetchBillets(){ result in
+    
+    func fetchBillets() {
+        BilletService().fetchBillets { result in
             switch result {
-                
-            case.success(let data):
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                    if data?.statusCode == 200 {
-                        self.isLoading = false
-                        self.billets = data?.billets ?? []
-                    }
-                    self.message = data?.message ?? ""
+            case .success(let billets):
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.billets = billets
                 }
-                
-            case.failure(let error):
-                print(error.localizedDescription)
+            case .failure(let error):
+                print("Error fetching billets: \(error.localizedDescription)")
             }
         }
     }

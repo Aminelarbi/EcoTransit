@@ -9,33 +9,27 @@ import Foundation
 import Alamofire
 import SwiftUI
 
-struct BilletService{
-    func fetchBillets(completion: @escaping(Result<fetchBilletsResponse?, Error>) -> Void) {
-           AF.request("\(Network.fetchBilletUrl)",
-                      method: .get,
-                      encoding: JSONEncoding.default)
-           .validate(contentType: ["application/json"])
-           .responseData { res in
-               switch res.result {
-                   
-               case .success:
-                   let responseData = Data(res.data!)
-                   print(responseData)
-                   do {
-                       let parsedData = try JSONDecoder().decode(fetchBilletsResponse.self, from: responseData)
-                       completion(.success(parsedData))
-                       print(parsedData.message)
-                   } catch {
-                       print(error)
-                       completion(.failure(error))
-                   }
-                   
-               case let .failure(err):
-                   debugPrint(err)
-                   completion(.failure(err))
-               }
-           }
-       }
+struct BilletService {
+    func fetchBillets(completion: @escaping (Result<[BilletModel], Error>) -> Void) {
+        AF.request("\(Network.fetchBilletUrl)", method: .get, encoding: JSONEncoding.default)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success(let data):
+                    do {
+                        let decodedData = try JSONDecoder().decode(fetchBilletsResponse.self, from: data)
+                        completion(.success(decodedData.billets))
+                    } catch {
+                        print("Error decoding JSON: \(error)")
+                        completion(.failure(error))
+                    }
+                case .failure(let error):
+                    print("Request failed with error: \(error)")
+                    completion(.failure(error))
+                }
+            }
+    }
 }
+
 
 
