@@ -13,8 +13,10 @@
 		6757EBCE2B0A6D7E008CADDD /* BilletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */; };
 		6757EBD12B0A6DCE008CADDD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6757EBD02B0A6DCE008CADDD /* Alamofire */; };
 		67E078592B04D824003F8585 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E078582B04D824003F8585 /* Home.swift */; };
+		67E899B92B0CC09900CF89DB /* SubscribeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E899B82B0CC09900CF89DB /* SubscribeService.swift */; };
+		67E899BB2B0CC0B700CF89DB /* SubscribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E899BA2B0CC0B700CF89DB /* SubscribeViewModel.swift */; };
+		67E899BD2B0CC0C500CF89DB /* SubscribeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E899BC2B0CC0C500CF89DB /* SubscribeModel.swift */; };
 		7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */; };
-		7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */; };
 		7C2EC12A2AFAE90A0047DBE9 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */; };
 		7C2EC12C2AFB05700047DBE9 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */; };
 		7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C475D3C2AF7B49400F84EF2 /* EcoTransitApp.swift */; };
@@ -54,8 +56,10 @@
 		6757EBCA2B0A6D52008CADDD /* BilletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletService.swift; sourceTree = "<group>"; };
 		6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletModel.swift; sourceTree = "<group>"; };
 		67E078582B04D824003F8585 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		67E899B82B0CC09900CF89DB /* SubscribeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeService.swift; sourceTree = "<group>"; };
+		67E899BA2B0CC0B700CF89DB /* SubscribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewModel.swift; sourceTree = "<group>"; };
+		67E899BC2B0CC0C500CF89DB /* SubscribeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeModel.swift; sourceTree = "<group>"; };
 		7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
-		7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationView.swift; sourceTree = "<group>"; };
 		7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		7C475D392AF7B49400F84EF2 /* EcoTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 			children = (
 				6757EBC52B0A6CB0008CADDD /* Network.swift */,
 				6757EBCA2B0A6D52008CADDD /* BilletService.swift */,
+				67E899B82B0CC09900CF89DB /* SubscribeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				6757EBC82B0A6D28008CADDD /* BilletViewModel.swift */,
+				67E899BA2B0CC0B700CF89DB /* SubscribeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */,
+				67E899BC2B0CC0C500CF89DB /* SubscribeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,7 +202,6 @@
 				7CD4A22B2AF7D92900E21836 /* SubscriptionView.swift */,
 				7CD4A22D2AF7EBF100E21836 /* BilletView.swift */,
 				7C2EC1252AFAD1A90047DBE9 /* PaymentView.swift */,
-				7C2EC1272AFAE2E60047DBE9 /* PaymentInformationView.swift */,
 				7C2EC1292AFAE90A0047DBE9 /* CreditCardView.swift */,
 				7C2EC12B2AFB05700047DBE9 /* NavigationBarView.swift */,
 				67E078582B04D824003F8585 /* Home.swift */,
@@ -347,8 +353,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E899B92B0CC09900CF89DB /* SubscribeService.swift in Sources */,
 				6757EBC62B0A6CB0008CADDD /* Network.swift in Sources */,
+				67E899BD2B0CC0C500CF89DB /* SubscribeModel.swift in Sources */,
 				7C475D462AF7B49500F84EF2 /* Persistence.swift in Sources */,
+				67E899BB2B0CC0B700CF89DB /* SubscribeViewModel.swift in Sources */,
 				6757EBC92B0A6D28008CADDD /* BilletViewModel.swift in Sources */,
 				6757EBCB2B0A6D52008CADDD /* BilletService.swift in Sources */,
 				7C2EC1262AFAD1A90047DBE9 /* PaymentView.swift in Sources */,
@@ -357,7 +366,6 @@
 				7C2EC12A2AFAE90A0047DBE9 /* CreditCardView.swift in Sources */,
 				7C475D3D2AF7B49400F84EF2 /* EcoTransitApp.swift in Sources */,
 				6757EBCE2B0A6D7E008CADDD /* BilletModel.swift in Sources */,
-				7C2EC1282AFAE2E60047DBE9 /* PaymentInformationView.swift in Sources */,
 				7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */,
 				7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */,
 				7C475D492AF7B49500F84EF2 /* EcoTransit.xcdatamodeld in Sources */,

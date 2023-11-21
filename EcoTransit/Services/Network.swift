@@ -14,4 +14,6 @@ struct Network {
     
     //billets routes
     static let fetchBilletUrl = BASE_URL + "/billets"
+    static let fetchSubscribeUrl = BASE_URL + "/subscribes"
+    
 }

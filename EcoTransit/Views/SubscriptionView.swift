@@ -1,3 +1,42 @@
+/*import SwiftUI
+
+struct SubscriptionView: View {
+    @ObservedObject private var viewModel = SubscribeViewModel()
+
+    var body: some View {
+        NavigationView {
+            List(viewModel.subscribes) { subscribe in
+                NavigationLink(destination: PaymentView(subscribe: subscribe)) {
+                    HStack {
+                        Image(subscribe.imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                            .padding(.trailing, 10)
+                            .cornerRadius(50)
+
+                        VStack(alignment: .leading) {
+                            Text(subscribe.name).font(.headline)
+                            Text(String(format: "%.2f", subscribe.price))
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Subscription")
+            .onAppear {
+                viewModel.fetchSubscribes()
+            }
+        }
+    }
+}
+
+struct SubscriptionView_Previews: PreviewProvider {
+    static var previews: some View {
+        SubscriptionView()
+    }
+}
+*/
+
 import SwiftUI
 
 struct Subscription: Identifiable {
@@ -53,4 +92,3 @@ struct SubscriptionView_Previews: PreviewProvider {
         SubscriptionView()
     }
 }
-
