@@ -1,12 +1,13 @@
-/*import SwiftUI
+import SwiftUI
 
 struct SubscriptionView: View {
     @ObservedObject private var viewModel = SubscribeViewModel()
+    @State private var selectedSubscribe: SubscribeModel?
 
     var body: some View {
         NavigationView {
             List(viewModel.subscribes) { subscribe in
-                NavigationLink(destination: PaymentView(subscribe: subscribe)) {
+                NavigationLink(destination: PaymentView(subscribe: selectedSubscribe)) {
                     HStack {
                         Image(subscribe.imageName)
                             .resizable()
@@ -19,6 +20,9 @@ struct SubscriptionView: View {
                             Text(subscribe.name).font(.headline)
                             Text(String(format: "%.2f", subscribe.price))
                         }
+                    }
+                    .onTapGesture {
+                        selectedSubscribe = subscribe
                     }
                 }
             }
@@ -35,8 +39,15 @@ struct SubscriptionView_Previews: PreviewProvider {
         SubscriptionView()
     }
 }
-*/
 
+
+
+
+
+
+
+/****/
+/*
 import SwiftUI
 
 struct Subscription: Identifiable {
@@ -92,3 +103,4 @@ struct SubscriptionView_Previews: PreviewProvider {
         SubscriptionView()
     }
 }
+*/

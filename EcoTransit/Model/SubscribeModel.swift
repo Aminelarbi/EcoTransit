@@ -10,45 +10,29 @@
 import Foundation
 
 struct SubscribeModel: Identifiable, Decodable {
-  var id: String
-  var name: String
-  var price: Double
-  var startDateString: String = ""
-  var endDateString: String = ""
-  var imageName: String
+    var id: String
+    var name: String
+    var price: Double
+    var startDateString: String? // Change this to match your JSON
+    var endDateString: String?   // Change this to match your JSON
+    var imageName: String
 
-  var startDate: Date {
-    DateFormatter.iso8601.date(from: startDateString) ?? Date()
-  }
+    var startDate: Date {
+        DateFormatter().date(from: startDateString!) ?? Date()
+    }
 
-  var endDate: Date {
-    DateFormatter.iso8601.date(from: endDateString) ?? Date()
-  }
+    var endDate: Date {
+        DateFormatter().date(from: endDateString!) ?? Date()
+    }
 
-  enum CodingKeys: String, CodingKey {
-    case id = "_id"
-    case name
-    case price
-    case startDateString
-    case endDateString
-    case imageName
-  }
-}
-
-extension DateFormatter {
-  static let iso8601: DateFormatter = {
-    let formatter
- 
-=
- 
-DateFormatter()
-    formatter.dateFormat =
- 
-"yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-
-    
-return formatter
-  }()
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case name
+        case price
+        case startDateString
+        case endDateString
+        case imageName
+    }
 }
 
 

@@ -4,7 +4,7 @@
 //
 //  Created by MedAmineLarbi on 7/11/2023.
 //
-/*
+
 import SwiftUI
 
 struct User {
@@ -383,8 +383,17 @@ struct CreditCardView_Previews: PreviewProvider {
     }
 }
 
-*/
 
+
+
+
+
+
+
+
+
+
+/*
 import SwiftUI
 
 struct User {
@@ -759,3 +768,4 @@ struct CreditCardView_Previews: PreviewProvider {
         return CreditCardView(subscription: subscriptionBinding, discountCode: $discountCode)
     }
 }
+*/

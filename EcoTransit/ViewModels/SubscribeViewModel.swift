@@ -22,7 +22,10 @@ class SubscribeViewModel: ObservableObject {
                     self.subscribes = subscribes
                 }
             case .failure(let error):
-                print("Error fetching subscribes: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    print("Error fetching subscribes: \(error.localizedDescription)")
+                    self.message = "Error fetching subscribes: \(error.localizedDescription)"
+                }
             }
         }
     }

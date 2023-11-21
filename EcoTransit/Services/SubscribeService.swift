@@ -16,18 +16,25 @@ struct SubscribeService {
             .responseData { response in
                 switch response.result {
                 case .success(let data):
-                    // Print raw JSON string for debugging
+                    // Print the raw JSON string for debugging
                     if let jsonString = String(data: data, encoding: .utf8) {
                         print("Raw JSON String: \(jsonString)")
                     }
 
+
                     do {
+                        let jsonString = String(data: data, encoding: .utf8)
+                        print("Raw JSON String: \(jsonString ?? "Unable to convert data to string")")
+                        
                         let decodedData = try JSONDecoder().decode(fetchSubscribesResponse.self, from: data)
                         completion(.success(decodedData.subscribes))
                     } catch {
                         print("Error decoding JSON: \(error)")
                         completion(.failure(error))
                     }
+
+
+                    // The rest of your code for additional decoding
 
                 case .failure(let error):
                     print("Request failed with error: \(error)")
@@ -36,5 +43,4 @@ struct SubscribeService {
             }
     }
 }
-
 

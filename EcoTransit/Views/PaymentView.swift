@@ -4,16 +4,16 @@
 //
 //  Created by MedAmineLarbi on 7/11/2023.
 //
-/*
+
 import SwiftUI
 
 struct PaymentView: View {
-    @State private var subscribeModel: SubscribeModel // Create a state variable for the subscription
+    @State private var subscribeModel: SubscribeModel?
     @State private var isCreditCardViewPresented = false
-    @State private var discountCode: Double = 0.0 // Add a discountCode state variable
+    @State private var discountCode: Double = 0.0
 
-    init(subscribe: SubscribeModel) {
-        self._subscribeModel = State(initialValue: subscribe) // Initialize the state variable
+    init(subscribe: SubscribeModel?) {
+        self._subscribeModel = State(initialValue: subscribe)
     }
 
     var body: some View {
@@ -23,17 +23,18 @@ struct PaymentView: View {
                     .font(.largeTitle)
                     .padding()
 
-                Text("You've selected the \(subscribeModel.name).")
-                    .font(.headline)
-                    .padding()
+                if let selectedSubscribe = subscribeModel {
+                    Text("You've selected the \(selectedSubscribe.name).")
+                        .font(.headline)
+                        .padding()
+                }
 
                 Spacer()
 
                 Button(action: {
-                    // Show the CreditCardView when the "Pay" button is pressed
                     isCreditCardViewPresented = true
                 }) {
-                    Text("Pay \(String(format: "%.2f", subscribeModel.price)) TND")
+                    Text("Pay \(String(format: "%.2f", subscribeModel?.price ?? 0.0)) TND")
                         .font(.title)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -41,19 +42,28 @@ struct PaymentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                .padding(.top, -20) // Adjust the top padding to move the button up
-
+                .padding(.top, -20)
                 .font(.title)
                 .padding(.vertical, -100)
                 .sheet(isPresented: $isCreditCardViewPresented) {
-                    CreditCardView(subscribe: $subscribeModel, discountCode: $discountCode) // Pass the discountCode
+                    // Create a binding to the unwrapped subscribeModel
+                    let unwrappedSubscribeModelBinding = Binding(
+                        get: { subscribeModel ?? SubscribeModel(id: "", name: "", price: 0.0, startDateString: "", endDateString: "", imageName: "") },
+                        set: { subscribeModel = $0 }
+                    )
+                    CreditCardView(subscribe: unwrappedSubscribeModelBinding, discountCode: $discountCode)
                 }
             }
-            .navigationBarTitle("Payment")
+            .navigationBarTitle(subscribeModel?.name ?? "Payment")
         }
     }
 }
-*/
+
+
+
+
+
+/*
 import SwiftUI
 
 struct PaymentView: View {
@@ -105,3 +115,4 @@ struct PaymentView: View {
         }
     }
 }
+*/
