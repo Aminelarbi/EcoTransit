@@ -12,6 +12,7 @@
 		6757EBCB2B0A6D52008CADDD /* BilletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBCA2B0A6D52008CADDD /* BilletService.swift */; };
 		6757EBCE2B0A6D7E008CADDD /* BilletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */; };
 		6757EBD12B0A6DCE008CADDD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6757EBD02B0A6DCE008CADDD /* Alamofire */; };
+		67CDE5062B0D15E7001C7078 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CDE5052B0D15E7001C7078 /* AsyncImageView.swift */; };
 		67E078592B04D824003F8585 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E078582B04D824003F8585 /* Home.swift */; };
 		67E899B92B0CC09900CF89DB /* SubscribeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E899B82B0CC09900CF89DB /* SubscribeService.swift */; };
 		67E899BB2B0CC0B700CF89DB /* SubscribeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E899BA2B0CC0B700CF89DB /* SubscribeViewModel.swift */; };
@@ -55,6 +56,7 @@
 		6757EBC82B0A6D28008CADDD /* BilletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletViewModel.swift; sourceTree = "<group>"; };
 		6757EBCA2B0A6D52008CADDD /* BilletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletService.swift; sourceTree = "<group>"; };
 		6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilletModel.swift; sourceTree = "<group>"; };
+		67CDE5052B0D15E7001C7078 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		67E078582B04D824003F8585 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		67E899B82B0CC09900CF89DB /* SubscribeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeService.swift; sourceTree = "<group>"; };
 		67E899BA2B0CC0B700CF89DB /* SubscribeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewModel.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				6757EBC52B0A6CB0008CADDD /* Network.swift */,
 				6757EBCA2B0A6D52008CADDD /* BilletService.swift */,
 				67E899B82B0CC09900CF89DB /* SubscribeService.swift */,
+				67CDE5052B0D15E7001C7078 /* AsyncImageView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				6757EBCE2B0A6D7E008CADDD /* BilletModel.swift in Sources */,
 				7CD4A22E2AF7EBF100E21836 /* BilletView.swift in Sources */,
 				7CD4A22A2AF7CFBA00E21836 /* CustomViews.swift in Sources */,
+				67CDE5062B0D15E7001C7078 /* AsyncImageView.swift in Sources */,
 				7C475D492AF7B49500F84EF2 /* EcoTransit.xcdatamodeld in Sources */,
 				67E078592B04D824003F8585 /* Home.swift in Sources */,
 				7CD4A22C2AF7D92900E21836 /* SubscriptionView.swift in Sources */,

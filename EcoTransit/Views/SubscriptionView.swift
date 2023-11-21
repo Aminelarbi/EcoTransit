@@ -9,11 +9,11 @@ struct SubscriptionView: View {
             List(viewModel.subscribes) { subscribe in
                 NavigationLink(destination: PaymentView(subscribe: selectedSubscribe)) {
                     HStack {
-                        Image(subscribe.imageName)
-                            .resizable()
+                        AsyncImageView(url: subscribe.imageName)
+                          
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
-                            .padding(.trailing, 10)
+                            
                             .cornerRadius(50)
 
                         VStack(alignment: .leading) {
