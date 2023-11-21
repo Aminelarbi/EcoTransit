@@ -19,11 +19,11 @@ struct BilletView: View {
             List {
                 ForEach(viewModel.billets) { billet in
                     HStack {
-                        Image(billet.serviceType + "Icon")
-                            .resizable()
+                        AsyncImageView(url: billet.imageName)
+                            
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 40, height: 40)
-                            .padding(.trailing, 10)
+                            
 
                         VStack(alignment: .leading) {
                             Text("Distance: \(String(format: "%.1f", billet.distance))km")
@@ -69,14 +69,14 @@ struct DetailedBilletView: View {
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
 
-            Image(billet.serviceType + "Icon")
-                .resizable()
+            AsyncImageView(url: billet.imageName)
+                
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, height: 80)
                 .padding()
 
             VStack(alignment: .center) {
-                Text("Service Type: \(billet.serviceType)")
+                Text("Service Type: \(billet.imageName)")
                     .font(.headline)
                     .padding(.bottom, 5)
 

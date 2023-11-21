@@ -12,13 +12,13 @@ struct BilletModel: Identifiable, Decodable {
     var distance: Double
     var estimatedPrice: Double
     var estimatedTime: String
-    var serviceType: String
+    var imageName: String
     enum CodingKeys: String, CodingKey {
             case id = "_id" // Match this to the actual key in your JSON data
             case distance
             case estimatedPrice
             case estimatedTime
-            case serviceType
+            case imageName
         }
 }
 struct fetchBilletsResponse : Decodable {
