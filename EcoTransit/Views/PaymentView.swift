@@ -28,16 +28,8 @@ struct PaymentView: View {
                         Text("You've selected the \(selectedSubscribe.name).")
                             .font(.headline)
                             .padding()
-
-                        if let startDate = selectedSubscribe.startDateString, let endDate = selectedSubscribe.endDateString {
-                            Text("Start Date: \(startDate)")
-                                .padding()
-
-                            Text("End Date: \(endDate)")
-                                .padding()
-                        } else {
-                            Text("Invalid date format")
-                        }
+                        AsyncImageView(url: subscribeModel!.imageName)
+                            .frame(width: 100, height: 100)
                     }
                 }
 
@@ -56,7 +48,8 @@ struct PaymentView: View {
                         .padding(.vertical, 10)  // Adjust vertical padding
                         .padding(.horizontal, 20) // Adjust horizontal padding
                 }
-                .padding(.top, -20)
+                
+                .padding(.top, -100) // Adjust the value based on your preference
 
                 .sheet(isPresented: $isCreditCardViewPresented) {
                     // Create a binding to the unwrapped subscribeModel
@@ -75,56 +68,3 @@ struct PaymentView: View {
 
 
 
-/*
-import SwiftUI
-
-struct PaymentView: View {
-    @State private var subscription: Subscription // Create a state variable for the subscription
-    @State private var isCreditCardViewPresented = false
-    @State private var discountCode: Double = 0.0 // Add a discountCode state variable
-
-    init(subscription: Subscription) {
-        self._subscription = State(initialValue: subscription) // Initialize the state variable
-    }
-
-    var body: some View {
-        NavigationView {
-            VStack {
-                Text("Payment Information")
-                    .font(.largeTitle)
-                    .padding()
-
-                Text("You've selected the \(subscription.name).")
-                    .font(.headline)
-                    .padding()
-
-                Spacer()
-
-                Button(action: {
-                               // Show the CreditCardView when the "Pay" button is pressed
-                               isCreditCardViewPresented = true
-                           }) {
-                               Text("Pay \(String(format: "%.2f", subscription.price)) TND")
-                                   .font(.title)
-                                   .padding()
-                                   .frame(maxWidth: .infinity)
-                                   .background(Color.green)
-                                   .foregroundColor(.white)
-                                   .cornerRadius(10)
-                           }
-                           .padding(.top, -20) // Adjust the top padding to move the button up
-                 
-               
-                .font(.title)
-                .padding(.vertical , -100    )
-                .sheet(isPresented: $isCreditCardViewPresented) {
-                    CreditCardView(subscription: $subscription, discountCode: $discountCode) // Pass the discountCode
-                  
-                }
-                
-            }
-            .navigationBarTitle("Payment")
-        }
-    }
-}
-*/
