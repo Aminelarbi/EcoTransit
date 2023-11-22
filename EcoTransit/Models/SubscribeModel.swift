@@ -17,13 +17,23 @@ struct SubscribeModel: Identifiable, Decodable {
     var endDateString: String?   // Change this to match your JSON
     var imageName: String
 
-    var startDate: Date {
-        DateFormatter().date(from: startDateString!) ?? Date()
+    var startDate: Date? {
+        formatDate(startDateString)
     }
 
-    var endDate: Date {
-        DateFormatter().date(from: endDateString!) ?? Date()
+    var endDate: Date? {
+        formatDate(endDateString)
     }
+
+    private func formatDate(_ dateString: String?) -> Date? {
+        guard let dateString = dateString else { return nil }
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+        return dateFormatter.date(from: dateString)
+    }
+
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -40,4 +50,9 @@ struct fetchSubscribesResponse : Decodable {
     let subscribes: [SubscribeModel]
     let message : String
     let statusCode : Int
+}
+func formattedDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    return formatter.string(from: date)
 }

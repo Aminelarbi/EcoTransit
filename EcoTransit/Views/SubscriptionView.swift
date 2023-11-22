@@ -27,6 +27,11 @@ struct SubscriptionView: View {
                 }
             }
             .navigationTitle("Subscription")
+            .navigationBarItems(trailing: Button(action: { viewModel.fetchSubscribes()
+                
+            })  {
+                Image(systemName: "arrow.clockwise")
+            })
             .onAppear {
                 viewModel.fetchSubscribes()
             }

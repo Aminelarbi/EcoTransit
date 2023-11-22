@@ -118,22 +118,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		6757EBC72B0A6D08008CADDD /* ViewModels */ = {
+		6757EBC72B0A6D08008CADDD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				6757EBC82B0A6D28008CADDD /* BilletViewModel.swift */,
 				67E899BA2B0CC0B700CF89DB /* SubscribeViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		6757EBCC2B0A6D6E008CADDD /* Model */ = {
+		6757EBCC2B0A6D6E008CADDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				6757EBCD2B0A6D7E008CADDD /* BilletModel.swift */,
 				67E899BC2B0CC0C500CF89DB /* SubscribeModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7C475D302AF7B49400F84EF2 = {
@@ -159,8 +159,8 @@
 		7C475D3B2AF7B49400F84EF2 /* EcoTransit */ = {
 			isa = PBXGroup;
 			children = (
-				6757EBCC2B0A6D6E008CADDD /* Model */,
-				6757EBC72B0A6D08008CADDD /* ViewModels */,
+				6757EBCC2B0A6D6E008CADDD /* Models */,
+				6757EBC72B0A6D08008CADDD /* ViewModel */,
 				6757EBC42B0A6C9D008CADDD /* Services */,
 				7CD4A2282AF7CF9800E21836 /* SupportingViews */,
 				7C475D6B2AF7BC5100F84EF2 /* Views */,

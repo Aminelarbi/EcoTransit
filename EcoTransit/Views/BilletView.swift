@@ -60,6 +60,13 @@ struct BilletView: View {
 struct DetailedBilletView: View {
     let billet: BilletModel
         @Binding var isPayingNow: Bool
+    // Helper function to extract the file name from the URL
+    private func extractFileNameWithoutExtension(from url: String) -> String {
+            if let fileName = URL(string: url)?.deletingPathExtension().lastPathComponent {
+                return fileName
+            }
+            return url
+        }
 
     var body: some View {
         VStack {
@@ -76,9 +83,10 @@ struct DetailedBilletView: View {
                 .padding()
 
             VStack(alignment: .center) {
-                Text("Service Type: \(billet.imageName)")
-                    .font(.headline)
-                    .padding(.bottom, 5)
+                // Display only the name of the imageName without file extension
+                                Text("Service Type: \(extractFileNameWithoutExtension(from: billet.imageName))")
+                                    .font(.headline)
+                                    .padding(.bottom, 5)
 
                 Text("Distance: \(String(format: "%.1f", billet.distance))km")
                 Text("Estimated Price: \(String(format: "%.2f", billet.estimatedPrice))dt")

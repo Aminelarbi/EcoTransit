@@ -7,7 +7,7 @@
 
 import Foundation
 struct Network {
-    static let BASE_URL = "http://localhost:3000/api"
+    static let BASE_URL = "http://localhost:4000/s/api"
     
     
     

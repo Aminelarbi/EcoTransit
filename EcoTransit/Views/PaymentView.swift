@@ -24,9 +24,21 @@ struct PaymentView: View {
                     .padding()
 
                 if let selectedSubscribe = subscribeModel {
-                    Text("You've selected the \(selectedSubscribe.name).")
-                        .font(.headline)
-                        .padding()
+                    VStack {
+                        Text("You've selected the \(selectedSubscribe.name).")
+                            .font(.headline)
+                            .padding()
+
+                        if let startDate = selectedSubscribe.startDateString, let endDate = selectedSubscribe.endDateString {
+                            Text("Start Date: \(startDate)")
+                                .padding()
+
+                            Text("End Date: \(endDate)")
+                                .padding()
+                        } else {
+                            Text("Invalid date format")
+                        }
+                    }
                 }
 
                 Spacer()
@@ -35,16 +47,17 @@ struct PaymentView: View {
                     isCreditCardViewPresented = true
                 }) {
                     Text("Pay \(String(format: "%.2f", subscribeModel?.price ?? 0.0)) TND")
-                        .font(.title)
+                        .font(.headline)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.green)
                         .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .cornerRadius(8)
+                        .padding(.vertical, 10)  // Adjust vertical padding
+                        .padding(.horizontal, 20) // Adjust horizontal padding
                 }
                 .padding(.top, -20)
-                .font(.title)
-                .padding(.vertical, -100)
+
                 .sheet(isPresented: $isCreditCardViewPresented) {
                     // Create a binding to the unwrapped subscribeModel
                     let unwrappedSubscribeModelBinding = Binding(
@@ -58,7 +71,6 @@ struct PaymentView: View {
         }
     }
 }
-
 
 
 
