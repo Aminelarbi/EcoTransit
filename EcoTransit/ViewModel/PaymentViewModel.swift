@@ -16,7 +16,7 @@ class PaymentViewModel: ObservableObject {
         isLoading = true
         payment.amount = amount
 
-        let url = URL(string: "http://localhost:4000/api/payment")!
+        let url = URL(string: "http://localhost:4000/s/api/payment")!
         let payload = ["amount": amount] // Add other required fields
 
         postRequest(url: url, payload: payload) { result in
