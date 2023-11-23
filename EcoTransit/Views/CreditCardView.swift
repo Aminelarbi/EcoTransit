@@ -1,10 +1,3 @@
-//
-//  CreditCardView.swift
-//  EcoTransit
-//
-//  Created by MedAmineLarbi on 7/11/2023.
-//
-
 import SwiftUI
 
 struct User {
@@ -151,34 +144,34 @@ struct SelectCardsView: View {
                     .frame(maxWidth: .infinity)
 
                 VStack {
-                              HStack {
-                                  Text("Subscribe ")
-                                      .foregroundColor(.green)
-                                  Spacer()
-                                  Text("+ TND \(String(format: "%.2f", total))")
-                                      .foregroundColor(.green)
-                              }
-                              Divider()
-                              HStack {
-                                  Text("Discount ")
-                                      .foregroundColor(.green)
-                                  Spacer()
-                                  Text("- TND \(String(format: "%.2f", discountCode))")
-                                      .foregroundColor(.green)
-                              }
-                              Divider()
-                              HStack {
-                                  Text("Total")
-                                      .foregroundColor(.green)
-                                  Spacer()
-                                  Text("TND \(String(format: "%.2f", total - discountCode))")
-                                      .foregroundColor(.green)
-                              }
-                          }.padding()
+                    HStack {
+                        Text("Subscribe ")
+                            .foregroundColor(.green)
+                        Spacer()
+                        Text("+ TND \(String(format: "%.2f", total))")
+                            .foregroundColor(.green)
+                    }
+                    Divider()
+                    HStack {
+                        Text("Discount ")
+                            .foregroundColor(.green)
+                        Spacer()
+                        Text("- TND \(String(format: "%.2f", discountCode))")
+                            .foregroundColor(.green)
+                    }
+                    Divider()
+                    HStack {
+                        Text("Total")
+                            .foregroundColor(.green)
+                        Spacer()
+                        Text("TND \(String(format: "%.2f", total - discountCode))")
+                            .foregroundColor(.green)
+                    }
+                }.padding()
             }
 
             Section {
-                NavigationLink(destination: SecondPaymentView()) {
+                NavigationLink(destination: paymentviewf()) {
                     Text("Subscribe now")
                         .frame(maxWidth: .infinity)
                         .frame(height: 44)
@@ -223,151 +216,6 @@ struct AddCardView: View {
     }
 }
 
-
-
-struct SecondPaymentView: View {
-    @State private var fullName = ""
-    @State private var cardNumber = ""
-    @State private var date = Date()
-    @State private var cvv = ""
-    @State private var showAlert = false
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            HStack {
-                Text("Payment Methods")
-                    .font(.system(size: 16, weight: .semibold))
-                Spacer()
-                Button("Add New Card") {
-                    // Action to show the map
-                }.foregroundColor(Color.pink)
-            }.padding()
-
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(Color.green.opacity(0.1))
-                    .cornerRadius(20)
-                    .shadow(radius: 5)
-                    .frame(height: 400)
-                    .frame(maxWidth: .infinity)
-                VStack(alignment: .leading, spacing: 30) {
-                    HStack {
-                        Image("paypal")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .padding(.leading, 16)
-                        Text("Paypal")
-                        Spacer()
-                        Button(action: {
-                            // Handle checkbox toggle logic here
-                        }) {
-                            Circle()
-                                .stroke(Color.green, lineWidth: 2)
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(.green)
-                                .padding(.trailing, 16)
-                        }
-                    }.padding(5)
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 60)
-                        .background(Color.white)
-                        .cornerRadius(20)
-
-                    HStack {
-                        Image("paypal")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .padding(.leading, 16)
-                        Text("Paypal")
-                        Spacer()
-                        Button(action: {
-                            // Handle checkbox toggle logic here
-                        }) {
-                            Circle()
-                                .stroke(Color.green, lineWidth: 2)
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(.green)
-                                .padding(.trailing, 16)
-                        }
-                    }.padding(5)
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 60)
-                        .background(Color.white)
-                        .cornerRadius(20)
-
-                    HStack {
-                        Image("paypal")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .padding(.leading, 16)
-                        Text("Paypal")
-                        Spacer()
-                        Button(action: {
-                            // Handle checkbox toggle logic here
-                        }) {
-                            Circle()
-                                .stroke(Color.green, lineWidth: 2)
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(.green)
-                                .padding(.trailing, 16)
-                        }
-                    }.padding(5)
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 60)
-                        .background(Color.white)
-                        .cornerRadius(20)
-
-                    Text("Pay with Debit/Credit Card")
-                        .font(.system(size: 18, weight: .semibold))
-                    HStack {
-                        Image("mastercard")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .padding(.leading, 16)
-                        Text("master card")
-                        Spacer()
-                        Button(action: {
-                            // Handle checkbox toggle logic here
-                        }) {
-                            Circle()
-                                .stroke(Color.green, lineWidth: 2)
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(.green)
-                                .padding(.trailing, 16)
-                        }
-                    }.padding(5)
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 60)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                }
-            }.padding()
-
-            Button(action: {
-                // Handle payment logic here
-                showAlert = true
-            }) {
-                Text("Continue")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 44)
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(50)
-            }
-            .navigationTitle("Payment method")
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("Payment Successful"),
-                    message: Text("Your payment has been processed."),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
-        }
-    }
-}
-
-enum PaymentMethod: String, Equatable, CaseIterable {
-    case creditCard = "Credit Card"
-    case cash = "Cash"
-    case amen = "Amen"
-}
-
 struct CreditCardView_Previews: PreviewProvider {
     @State static var discountCode: Double = 0.0 // Create a state variable for discountCode
 
@@ -382,14 +230,3 @@ struct CreditCardView_Previews: PreviewProvider {
         return CreditCardView(subscribe: subscribeBinding, discountCode: $discountCode)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
